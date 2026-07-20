@@ -1,6 +1,6 @@
-# Filament Helpdesk
+# Filament Document
 
-Aplikasi backend **panel admin** dan **API** untuk sistem **Helpdesk** yang dibangun menggunakan Laravel & Filament, dilengkapi dengan tema **Mekaya Admin Panel** dan ikon kustom.
+Aplikasi backend **panel admin** dan **API** untuk sistem **Dokumen (Document Management)** yang dibangun menggunakan Laravel & Filament, dilengkapi dengan tema **Mekaya Admin Panel** dan ikon kustom.
 
 ## Tech Stack
 
