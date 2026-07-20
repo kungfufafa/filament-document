@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <!-- Light Green background with rounded corners -->
+    <rect width="512" height="512" rx="108" fill="#22C55E"/>
+    <g fill="#FFFFFF">
+        <!-- Row 1: Top connected bar (slanted up to right, forming D top) -->
+        <path d="M 116 112 L 216 88 H 346 C 374 88 396 110 396 138 V 152 H 116 Z"/>
+        <!-- Row 2: Upper left stem and right D curve -->
+        <path d="M 116 174 H 216 V 214 H 116 Z"/>
+        <path d="M 296 174 H 396 V 214 H 296 Z"/>
+        <!-- Row 3: Middle left stem and right D curve -->
+        <path d="M 116 236 H 216 V 276 H 116 Z"/>
+        <path d="M 296 236 H 396 V 276 H 296 Z"/>
+        <!-- Row 4: Lower left stem and right D curve -->
+        <path d="M 116 298 H 216 V 338 H 116 Z"/>
+        <path d="M 296 298 H 396 V 338 H 296 Z"/>
+        <!-- Row 5: Bottom connected bar (forming D bottom, slanted bottom) -->
+        <path d="M 116 360 H 396 V 374 C 396 402 374 424 346 424 H 296 L 216 400 L 116 424 Z"/>
+    </g>
+</svg>
