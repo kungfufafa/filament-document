@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'core' => [
+        'client_id' => env('CORE_CLIENT_ID'),
+        'client_secret' => env('CORE_CLIENT_SECRET'),
+        'redirect' => env('CORE_REDIRECT_URI', 'http://127.0.0.1:8201/auth/callback'),
+    ],
+
 ];
