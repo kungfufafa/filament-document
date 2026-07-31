@@ -27,7 +27,7 @@ class CorporateStampsTable
                     ->toggleable(),
                 ImageColumn::make('logo_path')
                     ->label('Logo')
-                    ->disk('local')
+                    ->disk(config('filesystems.default'))
                     ->toggleable(),
                 ColorColumn::make('color'),
                 IconColumn::make('is_default')

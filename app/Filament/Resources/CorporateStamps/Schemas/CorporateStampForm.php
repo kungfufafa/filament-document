@@ -26,7 +26,7 @@ class CorporateStampForm
                             ->maxLength(255),
                         FileUpload::make('logo_path')
                             ->label('Logo')
-                            ->disk('local')
+                            ->disk(config('filesystems.default'))
                             ->directory('corporate-stamps')
                             ->image(),
                         ColorPicker::make('color')
