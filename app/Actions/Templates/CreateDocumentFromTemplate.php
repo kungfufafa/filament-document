@@ -51,7 +51,7 @@ class CreateDocumentFromTemplate
 
     private function copyTemplateFile(string $sourcePath): string
     {
-        $disk = Storage::disk('local');
+        $disk = Storage::disk(config('filesystems.default'));
         $extension = pathinfo($sourcePath, PATHINFO_EXTENSION);
         $destinationPath = 'documents/'.Str::uuid()->toString().($extension ? ".{$extension}" : '');
 

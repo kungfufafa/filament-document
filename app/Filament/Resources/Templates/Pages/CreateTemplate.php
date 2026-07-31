@@ -27,7 +27,7 @@ class CreateTemplate extends CreateRecord
             return $data;
         }
 
-        $disk = Storage::disk('local');
+        $disk = Storage::disk(config('filesystems.default'));
 
         $data['original_filename'] = basename($data['file_path']);
         $data['mime_type'] = $disk->mimeType($data['file_path']) ?: 'application/pdf';

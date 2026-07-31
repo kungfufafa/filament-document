@@ -23,7 +23,7 @@ class TemplateForm
                             ->maxLength(255),
                         FileUpload::make('file_path')
                             ->label('Document file')
-                            ->disk('local')
+                            ->disk(config('filesystems.default'))
                             ->directory('templates')
                             ->acceptedFileTypes(['application/pdf'])
                             ->required(fn (string $operation): bool => $operation === 'create')
