@@ -30,7 +30,7 @@ class SignaturesTable
                     ->toggleable(),
                 ImageColumn::make('image_path')
                     ->label('Image')
-                    ->disk('local')
+                    ->disk(config('filesystems.default'))
                     ->toggleable(),
                 IconColumn::make('is_default')
                     ->label('Default')

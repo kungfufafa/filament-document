@@ -38,7 +38,7 @@ class SignatureForm
                             ->visible(fn (Get $get): bool => static::methodIs($get, SignatureMethod::Draw)),
                         FileUpload::make('image_path')
                             ->label('Signature image')
-                            ->disk('local')
+                            ->disk(config('filesystems.default'))
                             ->directory('signatures')
                             ->image()
                             ->visible(fn (Get $get): bool => static::methodIs($get, SignatureMethod::Upload)),
