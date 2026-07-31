@@ -56,7 +56,7 @@ class CreateDocument extends CreateRecord
                 ->schema([
                     FileUpload::make('document_file')
                         ->label('Document file')
-                        ->disk('local')
+                        ->disk(config('filesystems.default'))
                         ->directory('documents')
                         ->visibility('private')
                         ->acceptedFileTypes([
@@ -231,7 +231,7 @@ class CreateDocument extends CreateRecord
 
         if (filled($data['document_file'] ?? null)) {
             $path = $data['document_file'];
-            $disk = Storage::disk('local');
+            $disk = Storage::disk(config('filesystems.default'));
 
             $data['file_path'] = $path;
             $data['original_filename'] = basename($path);

@@ -80,7 +80,7 @@ class DocumentsTable
                                 auth()->user(),
                             );
 
-                            if (! Storage::disk('local')->exists($record->file_path)) {
+                            if (! Storage::disk(config('filesystems.default'))->exists($record->file_path)) {
                                 Notification::make()
                                     ->title('File not found')
                                     ->danger()
@@ -89,7 +89,7 @@ class DocumentsTable
                                 return;
                             }
 
-                            return Storage::disk('local')->download(
+                            return Storage::disk(config('filesystems.default'))->download(
                                 $record->file_path,
                                 $record->original_filename ?: basename($record->file_path),
                             );
